@@ -1,38 +1,48 @@
-########## Configuração de ambiente ##########
+## Objetivo do Projeto
 
-Biblioteca instalada:
-- node -v (teste versão do node package manager)
-- npm -v (versão do npm)
-- http-server
-    * npm install http-server (usei o global -g)
-    * Só está funcionando com o comando npx http-server
+O objetivo principal deste projeto foi criar uma integração com uma API e consumir as informações disponibilizadas por ela.
 
-- Normalize.CSS
-    * npm install normalize.css
-    * Usei o link refernciado. (no head do HTML)
+# Configuração de Ambiente
 
-Comando:
-- http-server (vai rodar o servidor e criar um ip)
+## Bibliotecas Instaladas
 
-Fetch API:
-- Foi utilizado a biblioteca Fetch API. Não precisa instalar nada pq já vem instalado e pronto para usar no navegador.
+- **Node.js e npm:**
+  - `node -v` (para verificar a versão do Node Package Manager)
+  - `npm -v` (para verificar a versão do npm)
 
-########## Teoria ##########
+- **http-server:**
+  - Instalação global: `npm install -g http-server`
+  - Utilização: `npx http-server`
+  
+- **Normalize.CSS:**
+  - Instalação: `npm install normalize.css`
+  - Utilização: Link referenciado no cabeçalho HTML.
 
-Foi criada uma integração com a API - Pokedex
+## Comandos
 
-Protocolo HTTP (cliente-servidor)
-Composto por:
-- URL: http://pokeapi.com/api/v2/pokemon?type=fire&name=c
-nesse caso é por name query. Tudo qu evem depois da interrogação é pesquisa do tipo chave e valor.
-- Rquest Method: GET | POST | PUT | DELETE
-- Request Headers
-    content-type: application/json
-- Body:
+- `http-server`: Inicia o servidor e cria um IP para acesso.
+
+## Fetch API
+
+Foi utilizado a biblioteca Fetch API. Não é necessário instalar nada, pois já vem pré-instalada e pronta para uso no navegador.
+
+# Teoria
+
+## Integração com a API - Pokedex
+
+- **Protocolo HTTP (cliente-servidor):**
+  - URL: `http://pokeapi.com/api/v2/pokemon?type=fire&name=c` (neste exemplo, é uma pesquisa por nome)
+  - Métodos de Requisição: GET | POST | PUT | DELETE
+  - Headers de Requisição:
+    - `content-type: application/json`
+  - Corpo da Requisição:
+    ```json
     {
         "name": "test"
     }
-- Staus Code: 100/500
+    ```
+  - Códigos de Status: 100-500
 
-Técnica Mobile First
-- Ajustar para Pixel 5 / iPhone 12 Pro
+## Técnica Mobile First
+
+É importante ajustar o layout para dispositivos móveis, como Pixel 5 ou iPhone 12 Pro.
